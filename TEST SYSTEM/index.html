@@ -1,0 +1,49 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="./styles/style.css">
+	<script type="text/javascript" src="scripts/script.js"> </script>
+		<h1 id="principalMessage">TEST</h1>
+	</head>
+	<body>
+	 <div id="col1">
+		<div id="divQuantity">
+			<label>Quantity </label>
+			<input type="text" id="fquant" value="Digit the score goals" onkeyup="validate(this.id)" onclick="clean(this.id)">
+			<span hidden id="Sfquant">The data is wrong<span>
+		</div>
+
+		<div id="divGoals">
+			<label>Goals </label>
+			<input type="text" id="lgoal" value="Digit the expected amount of goals" onkeyup=" validate(this.id)" onclick="clean(this.id)">
+			<span hidden id="Slgoal">The data is wrong<span></span>  
+		</div>
+	  </div>
+
+	  <div id="col2">
+		  <div hidden id="instruction">
+			<p>
+				&nbsp&nbsp&nbsp Instruccions:
+			  <br>
+			  <br>&nbsp&nbsp&nbsp Goals are the score in the match
+			  <br>&nbsp&nbsp&nbsp Quantity is the expected score
+			  <br>&nbsp&nbsp&nbsp Goals must be bigger than Quantity
+			  <br>&nbsp&nbsp&nbsp Only introduce numbers
+			  <br>&nbsp&nbsp&nbsp Only numbers up 0
+			  <br>&nbsp&nbsp&nbsp To calculate press the button "Calculate Goals"
+			  <br>&nbsp&nbsp&nbsp To clean the data press the button "Clean Data"
+			</p>
+		</div>
+
+		<button id="button1" onclick="myHideShow(this.id)">Hide Bar</button>
+		<button id="button2" onclick="clearAll()">Clear Data</button>
+		<button id="button3" onclick="calculate('fquant','lgoal')">Calculate Goals</button>
+		<button id="button4" onclick="instructions()">Instructions</button>
+	  </div>
+
+	  <div id="Progress_Status"> 
+	   <div id="myprogressBar"><p id="countNumber"></p></div> 
+	  </div> 
+	  
+	  
+	</body>
+</html>
