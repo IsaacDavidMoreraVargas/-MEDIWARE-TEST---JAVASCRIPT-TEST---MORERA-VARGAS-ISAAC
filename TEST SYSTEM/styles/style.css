@@ -7,7 +7,7 @@ head
 h1
 {
 	margin-top: 2%;
-	padding-bottom: 2%;
+	padding-bottom: 1%;
 	text-align: center;
 	border-bottom: 2px solid lightslategray;
 	box-shadow: 2px;
@@ -33,20 +33,89 @@ span
 	color: lightslategray;
 }
 
-#divQuantity , #divGoals
+#row
 {
-	margin-top: 3%;
-	border-left: 6px solid lightslategray;
+	width: 100%;
+	display: flex;
+	margin-top: 2%;
 }
 
-#fquant, #lgoal
+#divQuantity , #divGoals
 {
-	display: block;
+	margin: 0;
+	padding: 0;
+	margin-top: 1%;
+}
+
+
+p
+{
+   margin:0;
+   padding: 0;
+   border-left: 6px solid;
+}
+
+h2
+{
+	text-align: center; 
+	background-color:  lightslategray;
+	color: white;
+	height: 45px;
+	margin-top: 0%;
+}
+
+#col1,#col2
+{
+	width: 48%;	
+	margin: 0;
+	padding: 0%;
+	margin-top: 0%;
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: 0%;
+	border-left: 6px solid lightgray;
+}
+
+#col2
+{
+	margin-left: 2%;
+}
+
+#frameInstruction
+{
+	font-family: sans-serif;
+	font-style:unset;
+	margin-left: 2%;
+}
+
+button
+{
+	margin-top: 1%;
+	height: 40px;
+	width: 120px;
+	margin-left: 2%;
+	background-color: lightgray;
+	color: white;
+}
+#button1,#button2,#button3,#button4
+{
+	margin-top: 4%;
+	width: 22%;
+}
+#button1:hover,#button2:hover,#button3:hover,#button4:hover
+{
+	width: 23%;
+	color: black;
+}
+
+#countNumber
+{
+	text-align: center;
 }
 
 #Progress_Status { 
 	margin-top: 2%;
-	width: 100%; 
+	width: 98.7%; 
 	height: 35px;
 	background-color: #ddd; 
 	border: 2px solid lightslategray;
@@ -63,62 +132,3 @@ span
 	line-height: 32px; 
 	color: black; 
 } 
-p
-{
-   margin:0;
-   padding: 0;
-}
-#col1,#col2
-{
-	display: inline-block;
-	width: 40%;
-}
-#col1
-{
-	margin-top: 0%;
-	position: relative;
-}
-
-#col2
-{
-	margin-left: 4%;
-	border-radius: 25%;
-	margin-top: 0%;
-	position: relative;
-}
-#instruction
-{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
-	font-style:unset;
-	border-left: 6px solid lightslategray;
-	border-right: 6px solid lightslategray;
-	margin-top: 0;
-}
-button
-{
-	margin-top: 1%;
-	height: 40px;
-	width: 120px;
-	margin-left: 2%;
-	border: 2px solid lightslategray;
-	border-radius: 4px;
-	background-color: lightsteelblue;
-	color: white;
-	display: inline-block;
-}
-#button1,#button2,#button3,#button4
-{
-	margin-top: 4%;
-}
-#button1:hover,#button2:hover,#button3:hover,#button4:hover
-{
-	height: 45px;
-	width: 125px;
-}
-
-#countNumber
-{
-	text-align: center;
-}

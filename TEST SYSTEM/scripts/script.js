@@ -1,5 +1,26 @@
 var output="";
 var result=0;
+
+
+function start()
+{
+	let x = document.getElementsByTagName("P").length;
+	let numberStart=0;
+	for(let tagP=0; tagP<x; tagP++)
+	{
+		if((tagP % 2) != 0)
+		{
+			document.getElementsByTagName("P")[tagP].style.borderColor =  "white";
+		}else
+		{
+			document.getElementsByTagName("P")[tagP].style.backgroundColor = "lightgray";
+			document.getElementsByTagName("P")[tagP].style.borderColor =  "lightgray";
+		}
+	}
+
+	instructions();
+}
+
 function validate(id)
 {
 	let data;
@@ -19,7 +40,7 @@ function validate(id)
 
 function instructions()
 {
-	let instruc= document.getElementById("instruction");
+	let instruc= document.getElementById("frameInstruction");
 	if (instruc.style.display === "none") 
 	  {
 		instruc.style.display = "block";
@@ -81,22 +102,25 @@ function update(data1,data2)
   {
 	  var element = document.getElementById("myprogressBar");    
 	  var width = 1; 
+
 	  var identity = setInterval(scene, 10); 
+
 	  function scene() 
 	  { 
-		if (width >= result) { 
+		if (width >= result) 
+		{ 
 		  clearInterval(identity); 
 		} else 
 		{ 
 		  width++;  
 		  element.style.width =  width + '%';  
-		  document.getElementById("countNumber").innerHTML=width + '%';
+		  document.getElementById("myprogressBar").innerHTML=width + '%';
 		}
 	  }
   }
 } 
 
-function myHideShow(id)
+function myHideShow()
 {
 	let bar = document.getElementById("Progress_Status");
 	  if (bar .style.display === "none") 
@@ -112,7 +136,6 @@ function myHideShow(id)
 
 function clearAll()
 {
-	
 	document.getElementById("fquant").value="Digit the score goals";
 	document.getElementById("Sfquant").style.display="none";
 	document.getElementById("lgoal").value="Digit the expected amount of goals";
