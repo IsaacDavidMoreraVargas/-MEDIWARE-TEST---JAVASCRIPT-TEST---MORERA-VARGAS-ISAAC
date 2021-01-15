@@ -1,17 +1,33 @@
 <html>
+	<title>Average System</title>
 	<head>
-	<link rel="stylesheet" href="./styles/style.css">
-	<script type="text/javascript" src="scripts/script.js"> </script>
-		<h1 id="principalMessage">AVERAGE TEST SYSTEM</h1>
+	    <link rel="stylesheet" href="./styles/style.css">
+	    <script type="text/javascript" src="scripts/script.js"> </script>
 	</head>
 	
 	<body onload="start()">
-
+		<div id="col2">
+			<div id="frameInstruction">
+				<h2>&nbsp&nbsp&nbsp Instructions</h2>
+				<p><br>&nbsp&nbsp&nbsp Goals are the score in the match</p>
+				<p><br>&nbsp&nbsp&nbsp Quantity is the expected score</p>
+				<p><br>&nbsp&nbsp&nbsp Goals must be bigger than Quantity</p>
+				<p><br>&nbsp&nbsp&nbsp Only introduce numbers</p>
+				<p><br>&nbsp&nbsp&nbsp Only numbers up 0</p>
+				<p><br>&nbsp&nbsp&nbsp To calculate press the button "Calculate Goals"</p>
+				<p><br>&nbsp&nbsp&nbsp To clean the data press the button "Clean Data"</p>
+				</p>
+			</div>
+		</div>
+		
+		<div id="navBar">
+				<h1>AVERAGE <h3>TEST SYSTEM</h3></h1>
+				<button id="button4" onclick="instructions()">Instructions</button>
+		</div>
+        
 		<div id="Progress_Status"> 
 			<div id="myprogressBar"></div> 
-		   </div> 
-
-     <div id="row">
+		</div> 
 
 		<div id="col1">
 			<div id="divQuantity">
@@ -29,23 +45,6 @@
 			<button id="button1" onclick="myHideShow()">Hide Bar</button>
 			<button id="button2" onclick="clearAll()">Clear Data</button>
 			<button id="button3" onclick="calculate('fquant','lgoal')">Calculate</button>
-			<button id="button4" onclick="instructions()">Instructions</button>
 		</div>
-
-	    <div  id="col2">
-			<div id="frameInstruction">
-				<h2>&nbsp&nbsp&nbsp Instructions</h2>
-				<p></p>
-				<p><br>&nbsp&nbsp&nbsp Goals are the score in the match</p>
-				<p><br>&nbsp&nbsp&nbsp Quantity is the expected score</p>
-				<p><br>&nbsp&nbsp&nbsp Goals must be bigger than Quantity</p>
-				<p><br>&nbsp&nbsp&nbsp Only introduce numbers</p>
-				<p><br>&nbsp&nbsp&nbsp Only numbers up 0</p>
-				<p><br>&nbsp&nbsp&nbsp To calculate press the button "Calculate Goals"</p>
-				<p><br>&nbsp&nbsp&nbsp To clean the data press the button "Clean Data"</p>
-				</p>
-			</div>
-		</div>
-	  </div>
 	</body>
 </html>

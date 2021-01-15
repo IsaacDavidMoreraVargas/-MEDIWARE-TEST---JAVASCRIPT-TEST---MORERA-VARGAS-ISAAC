@@ -1,23 +1,8 @@
 var output="";
 var result=0;
 
-
 function start()
 {
-	let x = document.getElementsByTagName("P").length;
-	let numberStart=0;
-	for(let tagP=0; tagP<x; tagP++)
-	{
-		if((tagP % 2) != 0)
-		{
-			document.getElementsByTagName("P")[tagP].style.borderColor =  "white";
-		}else
-		{
-			document.getElementsByTagName("P")[tagP].style.backgroundColor = "lightgray";
-			document.getElementsByTagName("P")[tagP].style.borderColor =  "lightgray";
-		}
-	}
-
 	instructions();
 }
 
@@ -40,14 +25,44 @@ function validate(id)
 
 function instructions()
 {
-	let instruc= document.getElementById("frameInstruction");
+	let instruc= document.getElementById("col2");
+	let timer=0;
 	if (instruc.style.display === "none") 
-	  {
+	{
 		instruc.style.display = "block";
-	  } else 
-	  {
-		instruc.style.display = "none";
-	  } 
+		instruc.style.width =  0 + '%';
+		let width=0;
+		var identity = setInterval(scene, 10); 
+		function scene() 
+		{ 
+			if (width >= 35) 
+			{ 
+			 clearInterval(identity); 
+			} else 
+			{ 
+			  width++;  
+			  width++;  
+			  instruc.style.width =  width + '%';  
+			}
+		}
+	} else 
+	{
+		let width=35;
+		var identity = setInterval(scene, 10); 
+		function scene() 
+		{ 
+			if (width <= 0) 
+			{ 
+			 clearInterval(identity); 
+			} else 
+			{ 
+			  width--;  
+			  width--;  
+			  instruc.style.width =  width + '%';  
+			}
+		}
+    	instruc.style.display = "none";
+	} 
 }
 
 function calculate(id1,id2)
@@ -98,7 +113,7 @@ function update(data1,data2)
   var Quantity= data1;
   var Goals= data2;
   result=100/Goals*Quantity;
-  if(result<100)
+  if(result<=100)
   {
 	  var element = document.getElementById("myprogressBar");    
 	  var width = 1; 

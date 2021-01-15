@@ -1,22 +1,37 @@
-head
+#navBar
 {
-	margin:0;
-	padding: 0;
+	border-top: 10px solid lightslategray;
+	margin: 0%;
+	padding: 0%;
+	width: 102%;
+	margin-top: -0.5%;
+	margin-left: -1%;
+	z-index: 0;
+	height: 10%;
+	border-bottom: 1px solid gray;
 }
 
-h1
+h1,h3
 {
-	margin-top: 2%;
-	padding-bottom: 1%;
+	margin: 0%;
+	margin-left: 5%;
+	margin-top: 1%;
+	padding: 0%;
 	text-align: center;
-	border-bottom: 2px solid lightslategray;
+	height: 60px;
 	box-shadow: 2px;
 	font-family: sans-serif;
+	float: left;
+}
+h3
+{
+	margin-left: 0%;
+	color: lightslategray;
 }
 
 label, input
 {
-  margin-left: 2%;
+	margin-left: 2%;
 }
 
 input
@@ -33,12 +48,6 @@ span
 	color: lightslategray;
 }
 
-#row
-{
-	width: 100%;
-	display: flex;
-	margin-top: 2%;
-}
 
 #divQuantity , #divGoals
 {
@@ -47,18 +56,18 @@ span
 	margin-top: 1%;
 }
 
-
 p
 {
    margin:0;
    padding: 0;
-   border-left: 6px solid;
+   border-bottom: 1px solid black;
+   margin-left: 5%;
 }
 
 h2
 {
 	text-align: center; 
-	background-color:  lightslategray;
+	background-color: lightslategray;
 	color: white;
 	height: 45px;
 	margin-top: 0%;
@@ -72,50 +81,73 @@ h2
 	margin-top: 0%;
 	display: inline-block;
 	margin-left: 5px;
-	margin-top: 0%;
+	margin-top: 1%;
 	border-left: 6px solid lightgray;
 }
-
+#col1
+{
+	z-index: 0;
+}
 #col2
 {
-	margin-left: 2%;
+	margin-right: -1%;
+	width: 35%;	
+	margin-top: 0.5%;
+	float: right;
+	border: 3px solid lightslategray;
+	border-left: 0px;
+	z-index: 1;
+	height: 100%;
+	background-color: rgba(216,216,216,0.9);
 }
 
 #frameInstruction
 {
 	font-family: sans-serif;
 	font-style:unset;
-	margin-left: 2%;
 }
 
 button
 {
 	margin-top: 1%;
 	height: 40px;
-	width: 120px;
-	margin-left: 2%;
-	background-color: lightgray;
-	color: white;
-}
-#button1,#button2,#button3,#button4
-{
-	margin-top: 4%;
 	width: 22%;
+	margin-left: 2%;
+	background-color: lightslategray;
+	color: white;
+	border-radius: 0%;
+	margin-top: 4%;
+	border-color: lightslategray;
 }
-#button1:hover,#button2:hover,#button3:hover,#button4:hover
+#button4
 {
-	width: 23%;
+	padding: 0%;
+	margin-top: 2%;
+	margin-left: 5%;
+	width: 5%;
+    float: left;
+	background-color: transparent;
+	border-color: transparent;
 	color: black;
 }
-
-#countNumber
+#button1:hover,#button2:hover,#button3:hover
 {
-	text-align: center;
+	width: 22.5%;
+	height: 41px;
+}
+#button4:hover
+{
+	border-color: black;
 }
 
-#Progress_Status { 
+#button4:not(:hover)
+{
+	border-color: transparent;
+}
+
+#Progress_Status {
 	margin-top: 2%;
-	width: 98.7%; 
+	width: 99.5%; 
 	height: 35px;
 	background-color: #ddd; 
 	border: 2px solid lightslategray;
@@ -127,7 +159,7 @@ button
 	margin: 0;
 	width: 1%; 
 	height: 100%; 
-	background-color: #4CAF50; 
+	background-color: lightslategray; 
 	text-align: center; 
 	line-height: 32px; 
 	color: black; 
