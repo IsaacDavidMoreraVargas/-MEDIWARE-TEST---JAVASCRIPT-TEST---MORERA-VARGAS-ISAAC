@@ -26,9 +26,12 @@ function validate(id)
 function instructions()
 {
 	let instruc= document.getElementById("col2");
+	let button=document.getElementById("button4");
+
 	let timer=0;
 	if (instruc.style.display === "none") 
 	{
+		button.innerText="Hide Instructions";
 		instruc.style.display = "block";
 		instruc.style.width =  0 + '%';
 		let width=0;
@@ -47,6 +50,8 @@ function instructions()
 		}
 	} else 
 	{
+		button.innerText="Show Instructions";
+
 		let width=35;
 		var identity = setInterval(scene, 10); 
 		function scene() 
@@ -67,6 +72,8 @@ function instructions()
 
 function calculate(id1,id2)
 {
+	instructions();
+	
 	let data1;
 	try
 	{
@@ -135,16 +142,31 @@ function update(data1,data2)
   }
 } 
 
-function myHideShow()
+function myHideShow(id)
 {
+	let data;
+	try
+	{
+		data=document.getElementById(id);
+	}catch(err)	{ 	}
+
 	let bar = document.getElementById("Progress_Status");
 	  if (bar .style.display === "none") 
 	  {
-		bar .style.display = "block";
+		if(!isNaN(data))
+		{
+		   data.innerText="Hide Bar";
+		}
+		
+		bar.style.display = "block";
 		document.getElementById(id).innerHTML="Hide Bar";
 	  } else 
 	  {
-		bar .style.display = "none";
+		if(!isNaN(data))
+		{
+		   data.innerText="Show Bar";
+		}
+		bar.style.display = "none";
 		document.getElementById(id).innerHTML="Show Bar";
 	  }  
 }
