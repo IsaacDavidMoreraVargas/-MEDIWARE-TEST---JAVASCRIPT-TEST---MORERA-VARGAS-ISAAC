@@ -98,7 +98,7 @@ h2
 	border-left: 0px;
 	z-index: 1;
 	height: 100%;
-	background-color: rgba(216,216,216,0.9);
+	background-color: rgba(216,216,216,1);
 }
 
 #frameInstruction
@@ -138,6 +138,8 @@ button
 #button4:hover
 {
 	border-color: black;
+	background-color: lightslategray;
+	color:white;
 }
 
 #button4:not(:hover)
